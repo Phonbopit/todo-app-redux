@@ -11,6 +11,9 @@
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1"
   },
+  "scripts": {
+    "dev": "./node_modules/.bin/webpack-dev-server"
+  },
   "dependencies": {
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
