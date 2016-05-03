@@ -1,3 +1,5 @@
+var path = require('path');
+
 module.exports = {
   entry: './App',
   output: {
@@ -9,6 +11,11 @@ module.exports = {
     port: 7777
   },
   module: {
+    preLoaders: [{
+      test: /\.jsx?$/,
+      exclude: /node_modules/,
+      loader: 'eslint-loader'
+    }],
     loaders: [{
       test: /\.jsx?$/,
       exclude: /node_modules/,
