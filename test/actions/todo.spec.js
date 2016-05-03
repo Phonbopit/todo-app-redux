@@ -10,4 +10,4 @@ describe('Todo Actions', () => {
       text: 'Setup React'
     });
   });
-})
+});
