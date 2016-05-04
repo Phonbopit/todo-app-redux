@@ -25,8 +25,15 @@ describe('Todo Reducers', () => {
       }
     ]);
 
+    // state = 1 todo
     expect(
-      todos([], {
+      todos([
+        {
+          id: 0,
+          text: 'Learn React',
+          completed: false
+        }
+      ], {
         type: 'ADD_TODO',
         text: 'Learn Redux',
         id: 1
@@ -42,7 +49,40 @@ describe('Todo Reducers', () => {
         text: 'Learn Redux',
         completed: false
       }
-    ])
+    ]);
+
+    // state = 2 todos
+    expect(
+      todos([{
+        id: 0,
+        text: 'Learn React',
+        completed: false
+      }, {
+        id: 1,
+        text: 'Learn Redux',
+        completed: false
+      }], {
+        type: 'ADD_TODO',
+        id: 2,
+        text: 'Learn Mocha'
+      })
+    ).to.eql([
+      {
+        id: 0,
+        text: 'Learn React',
+        completed: false
+      },
+      {
+        id: 1,
+        text: 'Learn Redux',
+        completed: false
+      },
+      {
+        id: 2,
+        text: 'Learn Mocha',
+        completed: false
+      }
+    ]);
 
   });
 });
