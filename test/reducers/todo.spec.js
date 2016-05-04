@@ -25,5 +25,24 @@ describe('Todo Reducers', () => {
       }
     ]);
 
+    expect(
+      todos([], {
+        type: 'ADD_TODO',
+        text: 'Learn Redux',
+        id: 1
+      })
+    ).to.eql([
+      {
+        id: 0,
+        text: 'Learn React',
+        completed: false
+      },
+      {
+        id: 1,
+        text: 'Learn Redux',
+        completed: false
+      }
+    ])
+
   });
 });

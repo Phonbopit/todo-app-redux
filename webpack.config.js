@@ -13,7 +13,8 @@ module.exports = {
   module: {
     preLoaders: [{
       test: /\.jsx?$/,
-      exclude: /node_modules/,
+      exclude: /bundle\.js$/,
+      include: __dirname + '/actions',
       loader: 'eslint-loader'
     }],
     loaders: [{
