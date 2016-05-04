@@ -95,4 +95,36 @@ describe('Todo Reducers', () => {
 
     expect(todoApp).to.be.a('function');
   });
+
+  it('should handle TOGGLE_TODO', () => {
+
+    expect(
+      todos([
+        {
+          text: 'Good Morning',
+          completed: false,
+          id: 0
+        },
+        {
+          text: 'Good Afternoon',
+          completed: true,
+          id: 1
+        }
+      ], {
+        type: 'TOGGLE_TODO',
+        id: 1
+      })
+    ).to.eql([
+      {
+        text: 'Good Morning',
+        completed: false,
+        id: 0
+      },
+      {
+        text: 'Good Afternoon',
+        completed: false,
+        id: 1
+      }
+    ])
+  });
 });
