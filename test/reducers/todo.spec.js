@@ -1,5 +1,6 @@
 import { expect } from 'chai';
 import todos from '../../reducers/todos';
+import { combineReducers } from 'redux';
 
 describe('Todo Reducers', () => {
   it('should have default state', () => {
@@ -84,5 +85,14 @@ describe('Todo Reducers', () => {
       }
     ]);
 
+  });
+
+  it('create store with combineReducers should return function', () => {
+
+    let todoApp = combineReducers({
+      todos
+    });
+
+    expect(todoApp).to.be.a('function');
   });
 });
