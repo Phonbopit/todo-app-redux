@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { addTodo } from '../../actions/todos';
+import { addTodo, toggleTodo } from '../../actions/todos';
 
 describe('Todo Actions', () => {
 
@@ -9,5 +9,12 @@ describe('Todo Actions', () => {
       id: 0,
       text: 'Setup React'
     });
+  });
+
+  it('toggleTodo() should create TOGGLE_TODO action', () => {
+    expect(toggleTodo(2)).to.eql({
+      type: 'TOGGLE_TODO',
+      id: 2
+    })
   });
 });
