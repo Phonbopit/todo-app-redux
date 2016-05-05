@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { addTodo, toggleTodo } from '../../actions/todos';
+import { addTodo, toggleTodo, setFilter } from '../../actions/todos';
 
 describe('Todo Actions', () => {
 
@@ -17,4 +17,11 @@ describe('Todo Actions', () => {
       id: 2
     })
   });
+
+  it('setFilter() should chreate SET_FILTER action', () => {
+    expect(setFilter('active')).to.eql({
+      type: 'SET_FILTER',
+      filter: 'active'
+    });
+  })
 });

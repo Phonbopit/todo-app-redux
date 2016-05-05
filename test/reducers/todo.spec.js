@@ -1,5 +1,7 @@
 import { expect } from 'chai';
 import todos from '../../reducers/todos';
+import filters from '../../reducers/filters';
+
 import { combineReducers } from 'redux';
 
 describe('Todo Reducers', () => {
@@ -126,5 +128,15 @@ describe('Todo Reducers', () => {
         id: 1
       }
     ])
+  });
+
+  it('should handle SET_FILTER', () => {
+
+    expect(
+      filters(undefined, {
+        type: 'SET_FILTER',
+        filter: 'SHOW_COMPLETED'
+      })
+    ).to.equal('SHOW_COMPLETED')
   });
 });
