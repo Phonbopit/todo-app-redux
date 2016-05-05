@@ -1,10 +1,11 @@
 import { combineReducers, createStore } from 'redux';
 import todos from './todos';
+import filter from './filters';
 
-export const store = createStore(todos);
-
+// combine 2 reducers with combineReducers()
 const todoApp = combineReducers({
-  todos
+  todos,
+  filter
 });
 
 export default todoApp

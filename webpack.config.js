@@ -11,12 +11,6 @@ module.exports = {
     port: 7777
   },
   module: {
-    preLoaders: [{
-      test: /\.jsx?$/,
-      exclude: /bundle\.js$/,
-      include: __dirname + '/actions',
-      loader: 'eslint-loader'
-    }],
     loaders: [{
       test: /\.jsx?$/,
       exclude: /node_modules/,
