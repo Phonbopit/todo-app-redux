@@ -2,13 +2,22 @@ import React, { PropTypes } from 'react'
 
 const Todo = ({ onClick, completed, text }) => (
   <li
-    onClick={onClick}
-    style={{
-      textDecoration: completed ? 'line-through' : 'none'
-    }}
+    className={completed ? 'completed' : ''}
+
   >
-    {text}
+
+    <div className="view">
+      <input
+        className="toggle"
+        type="checkbox"
+        onChange={onClick}
+        checked={completed}/>
+      <label>{text}</label>
+      <button className="destroy"></button>
+    </div>
+
   </li>
+
 )
 
 Todo.propTypes = {

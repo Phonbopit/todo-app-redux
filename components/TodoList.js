@@ -2,7 +2,8 @@ import React, { PropTypes } from 'react'
 import Todo from './Todo'
 
 const TodoList = ({ todos, onTodoClick }) => (
-  <ul>
+  <section className="main">
+    <ul className="todo-list">
     {todos.map(todo => {
       return (
         <Todo
@@ -12,7 +13,8 @@ const TodoList = ({ todos, onTodoClick }) => (
         />
       )
     })}
-  </ul>
+    </ul>
+  </section>
 )
 
 TodoList.propTypes = {

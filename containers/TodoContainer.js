@@ -6,7 +6,7 @@ let TodoContainer = ({ dispatch }) => {
   let input
 
   return (
-    <div>
+    <header className="header">
       <form onSubmit={e => {
         e.preventDefault()
         if (!input.value.trim()) {
@@ -15,9 +15,11 @@ let TodoContainer = ({ dispatch }) => {
         dispatch(addTodo(input.value))
         input.value = ''
       }}>
-        <input type="text" />
+        <input className="new-todo" placeholder="What needs to be done?" ref={node => {
+          input = node
+        }} />
       </form>
-    </div>
+    </header>
   )
 }
 TodoContainer = connect()(TodoContainer)

@@ -15,6 +15,7 @@ class App extends Component {
   render() {
     return (
       <section className="todoapp">
+        <h1>Redux todos</h1>
         <AddTodo />
         <TodoListContainer />
         <Footer />
