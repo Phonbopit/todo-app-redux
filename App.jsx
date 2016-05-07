@@ -18,7 +18,7 @@ class App extends Component {
         <h1>Redux todos</h1>
         <AddTodo />
         <TodoListContainer />
-        <Footer />
+        <Footer items="xx"/>
       </section>
     )
   }

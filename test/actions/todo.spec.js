@@ -18,10 +18,11 @@ describe('Todo Actions', () => {
     })
   });
 
-  it('setFilter() should chreate SET_FILTER action', () => {
+  it('setFilter() should create SET_FILTER action', () => {
     expect(setFilter('active')).to.eql({
       type: 'SET_FILTER',
       filter: 'active'
     });
-  })
+  });
+
 });

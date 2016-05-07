@@ -1,8 +1,10 @@
 import React from 'react';
 import FilterLink from '../containers/FilterLink';
+import RemainingItem from '../containers/RemainingItem';
 
 const Footer = () => (
   <footer className="footer">
+    <RemainingItem />
     <ul className="filters">
       <FilterLink filter="SHOW_ALL">
       All
