@@ -13,3 +13,5 @@ npm run dev
 # Test with mocha
 npm test
 ```
+
+Server running at [http://localhost:7777](http://localhost:7777)
