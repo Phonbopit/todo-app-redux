@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import TodoContainer from './containers/TodoContainer';
+import AddTodo from './containers/TodoContainer';
+import TodoListContainer from './containers/TodoListContainer';
 import { Provider } from 'react-redux';
-import { store } from './reducers';
+import { createStore } from 'redux';
+import todoApp from './reducers';
+import Footer from './components/Footer';
+
+// create store from reducers
+let store = createStore(todoApp);
 
 class App extends Component {
 
   render() {
     return (
-      <div>
-        <h3>Hello World</h3>
-        <TodoContainer />
-      </div>
+      <section className="todoapp">
+        <AddTodo />
+        <TodoListContainer />
+        <Footer />
+      </section>
     )
   }
 }
