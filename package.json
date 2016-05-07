@@ -19,7 +19,8 @@
   },
   "scripts": {
     "dev": "./node_modules/.bin/webpack-dev-server",
-    "test": "mocha --watch --recursive --compilers js:babel-core/register",
+    "test": "mocha --recursive --compilers js:babel-core/register",
+    "test:watch": "mocha --watch --recursive --compilers js:babel-core/register",
     "lint": "./node_modules/.bin/eslint --ignore-pattern webpack.config.js --ext .js,.jsx ."
   },
   "dependencies": {
