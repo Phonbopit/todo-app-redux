@@ -1,5 +1,4 @@
-# todo-app-redux
-[![Build Status](https://travis-ci.org/Phonbopit/todo-app-redux.svg?branch=master)](https://travis-ci.org/Phonbopit/todo-app-redux)
+# todo-app-redux [![Build Status](https://travis-ci.org/Phonbopit/todo-app-redux.svg?branch=master)](https://travis-ci.org/Phonbopit/todo-app-redux)
 
 Simple Todo App with Redux from [Redux Docs](http://redux.js.org/) and implement css with [todomvc](https://github.com/tastejs/todomvc-app-css)
 
